@@ -8,7 +8,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  Phone,
   MapPin,
   Code,
   Brain,
@@ -129,22 +128,6 @@ export default function Portfolio() {
       category: "Healthcare AI",
     },
     {
-      title: "AQI Analyzer",
-      subtitle: "Pollution Tracking System",
-      description:
-        "Advanced pollution tracking system for Indian cities using Python and APIs, providing detailed pollutant breakdown and real-time hazard alerts to help users make informed decisions about air quality.",
-      highlights: [
-        "Real-time pollution tracking for Indian cities",
-        "Detailed pollutant breakdown analysis",
-        "Hazard alert system implementation",
-        "Python-based data processing",
-        "API integration for live data",
-      ],
-      tech: ["Python", "API Integration", "Data Analysis", "Real-time Processing"],
-      status: "Completed",
-      category: "Data Analytics",
-    },
-    {
       title: "ViewPay",
       subtitle: "Ad-Reward Platform Startup",
       description:
@@ -157,8 +140,9 @@ export default function Portfolio() {
         "AdSense integration for monetization",
       ],
       tech: ["JavaScript", "Node.js", "MongoDB", "AdSense API", "Authentication"],
-      status: "Startup Concept",
+      status: "Live",
       category: "Fintech",
+      link: "https://www.viewpay.store/",
     },
   ]
 
@@ -172,27 +156,7 @@ export default function Portfolio() {
     >
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div
-          className={`absolute -top-40 -right-40 w-80 h-80 rounded-full mix-blend-multiply filter blur-xl animate-pulse ${
-            isDarkMode
-              ? "bg-gradient-to-r from-cyan-500 to-blue-600 opacity-20"
-              : "bg-gradient-to-r from-cyan-200 to-blue-300 opacity-30"
-          }`}
-        ></div>
-        <div
-          className={`absolute -bottom-40 -left-40 w-80 h-80 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000 ${
-            isDarkMode
-              ? "bg-gradient-to-r from-purple-500 to-pink-600 opacity-20"
-              : "bg-gradient-to-r from-purple-200 to-pink-300 opacity-30"
-          }`}
-        ></div>
-        <div
-          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000 ${
-            isDarkMode
-              ? "bg-gradient-to-r from-blue-500 to-cyan-500 opacity-10"
-              : "bg-gradient-to-r from-blue-200 to-cyan-200 opacity-20"
-          }`}
-        ></div>
+        {/* Background effects removed for cleaner professional look */}
       </div>
 
       {/* Navigation */}
@@ -374,7 +338,7 @@ export default function Portfolio() {
                   <Github size={28} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/piyush–maurya"
+                  href="https://www.linkedin.com/in/piyush--maurya/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`transition-all duration-300 hover:scale-110 ${
@@ -408,7 +372,7 @@ export default function Portfolio() {
 
                 {/* Main Image Container */}
                 <div
-                  className={`relative w-80 h-96 md:w-96 md:h-[28rem] rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 ${
+                  className={`relative w-56 h-72 md:w-72 md:h-88 rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 ${
                     isDarkMode
                       ? "bg-gradient-to-br from-gray-800 to-blue-900 border border-cyan-400/60 glow-cyan"
                       : "bg-gradient-to-br from-white to-blue-50 border border-gray-200"
@@ -419,7 +383,7 @@ export default function Portfolio() {
                     alt="Piyush Maurya - AI/ML Developer"
                     width={400}
                     height={500}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     priority
                   />
 
@@ -439,18 +403,6 @@ export default function Portfolio() {
                     }`}
                   >
                     <Brain size={24} className="text-white" />
-                  </div>
-
-                  <div
-                    className={`absolute bottom-4 left-4 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg transition-all duration-300 ${
-                      isDarkMode
-                        ? "bg-gray-900/90 border border-cyan-400/60 glow-cyan"
-                        : "bg-white/90 border border-cyan-300"
-                    }`}
-                  >
-                    <span className={`text-sm font-medium ${isDarkMode ? "text-cyan-300" : "text-cyan-700"}`}>
-                      AI/ML Expert
-                    </span>
                   </div>
                 </div>
 
@@ -579,9 +531,9 @@ export default function Portfolio() {
                 </CardHeader>
                 <CardContent>
                   <p className={`text-sm leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
-                    Initiative to start a Startup & Entrepreneurship Club in college, promoting innovation and
-                    entrepreneurial thinking among students. Passionate about fitness and maintaining a disciplined
-                    lifestyle.
+                    Passionate about entrepreneurship and innovation in technology. Actively exploring startup
+                    opportunities and building networks within the tech community. Committed to fitness and maintaining
+                    a disciplined lifestyle for personal and professional growth.
                   </p>
                 </CardContent>
               </Card>
@@ -896,6 +848,23 @@ export default function Portfolio() {
                       </Badge>
                     ))}
                   </div>
+                  {project.link && (
+                    <div className="mt-4">
+                      <Button
+                        asChild
+                        size="sm"
+                        className={`transition-all duration-300 hover:scale-105 ${
+                          isDarkMode
+                            ? "bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white"
+                            : "bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white"
+                        }`}
+                      >
+                        <a href={project.link} target="_blank" rel="noopener noreferrer">
+                          View Live Site
+                        </a>
+                      </Button>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
@@ -1069,10 +1038,10 @@ export default function Portfolio() {
                     Lamrin Tech Skills University, Ropar, Punjab, India
                   </p>
                   <p className={`text-lg ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
-                    Expected Graduation: May 2026
+                    Expected Graduation: July 2027
                   </p>
                   <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-lg px-4 py-1">
-                    Currently in 3rd Year
+                    Currently in 2nd Year
                   </Badge>
                 </div>
               </CardHeader>
@@ -1121,59 +1090,6 @@ export default function Portfolio() {
                 </div>
               </CardContent>
             </Card>
-
-            <Card
-              className={`shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] ${
-                isDarkMode
-                  ? "bg-gradient-to-br from-cyan-900/80 to-green-900/80 border-cyan-400/60 glow-cyan"
-                  : "bg-gradient-to-br from-cyan-50 to-green-50 border-cyan-200"
-              }`}
-            >
-              <CardHeader>
-                <CardTitle className={`text-2xl ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                  Secondary Education
-                </CardTitle>
-                <CardDescription className={`text-lg ${isDarkMode ? "text-cyan-300" : "text-cyan-700"}`}>
-                  Simpkins School, Agra, Uttar Pradesh, India
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div
-                    className={`p-4 rounded-lg shadow-md transition-all duration-300 ${
-                      isDarkMode
-                        ? "bg-gradient-to-r from-cyan-900/50 to-blue-900/50 border border-cyan-400/60 glow-cyan"
-                        : "bg-gradient-to-r from-cyan-50 to-blue-50 border border-cyan-200"
-                    }`}
-                  >
-                    <h4 className={`font-semibold mb-2 text-xl ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                      Class XII (2022)
-                    </h4>
-                    <p className={`text-lg font-medium ${isDarkMode ? "text-cyan-300" : "text-cyan-700"}`}>
-                      CBSE Board
-                    </p>
-                    <p className={isDarkMode ? "text-gray-300" : "text-gray-600"}>Science Stream with Mathematics</p>
-                  </div>
-                  <div
-                    className={`p-4 rounded-lg shadow-md transition-all duration-300 ${
-                      isDarkMode
-                        ? "bg-gradient-to-r from-blue-900/50 to-purple-900/50 border border-blue-400/60 glow-purple"
-                        : "bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200"
-                    }`}
-                  >
-                    <h4 className={`font-semibold mb-2 text-xl ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                      Class X (2020)
-                    </h4>
-                    <p className={`text-lg font-medium ${isDarkMode ? "text-blue-300" : "text-blue-700"}`}>
-                      CBSE Board
-                    </p>
-                    <p className={isDarkMode ? "text-gray-300" : "text-gray-600"}>
-                      Strong foundation in Mathematics and Science
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -1206,7 +1122,7 @@ export default function Portfolio() {
             chat about technology and innovation, I'd love to hear from you!
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
             <Card
               className={`shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group ${
                 isDarkMode
@@ -1217,9 +1133,9 @@ export default function Portfolio() {
               <CardContent className="pt-8 text-center">
                 <Mail
                   className={`mx-auto mb-4 group-hover:animate-bounce ${isDarkMode ? "text-cyan-400" : "text-cyan-600"}`}
-                  size={40}
+                  size={32}
                 />
-                <h3 className={`font-semibold mb-3 text-xl ${isDarkMode ? "text-white" : "text-gray-900"}`}>Email</h3>
+                <h3 className={`font-semibold mb-3 text-lg ${isDarkMode ? "text-white" : "text-gray-900"}`}>Email</h3>
                 <a
                   href="mailto:piyushmaurya6074@gmail.com"
                   className={`transition-colors font-medium text-lg ${
@@ -1234,30 +1150,6 @@ export default function Portfolio() {
             <Card
               className={`shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group ${
                 isDarkMode
-                  ? "bg-gradient-to-br from-green-900/80 to-emerald-900/80 border-green-400/60"
-                  : "bg-gradient-to-br from-green-50 to-emerald-50 border-green-200"
-              }`}
-            >
-              <CardContent className="pt-8 text-center">
-                <Phone
-                  className={`mx-auto mb-4 group-hover:animate-pulse ${isDarkMode ? "text-green-400" : "text-green-600"}`}
-                  size={40}
-                />
-                <h3 className={`font-semibold mb-3 text-xl ${isDarkMode ? "text-white" : "text-gray-900"}`}>Phone</h3>
-                <a
-                  href="tel:+919152399370"
-                  className={`transition-colors font-medium text-lg ${
-                    isDarkMode ? "text-green-400 hover:text-green-300" : "text-green-600 hover:text-green-700"
-                  }`}
-                >
-                  +91 9152399370
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card
-              className={`shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group ${
-                isDarkMode
                   ? "bg-gradient-to-br from-purple-900/80 to-pink-900/80 border-purple-400/60 glow-purple"
                   : "bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200"
               }`}
@@ -1265,9 +1157,9 @@ export default function Portfolio() {
               <CardContent className="pt-8 text-center">
                 <MapPin
                   className={`mx-auto mb-4 group-hover:animate-bounce ${isDarkMode ? "text-purple-400" : "text-purple-600"}`}
-                  size={40}
+                  size={32}
                 />
-                <h3 className={`font-semibold mb-3 text-xl ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                <h3 className={`font-semibold mb-3 text-lg ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                   Location
                 </h3>
                 <p className={`font-medium text-lg ${isDarkMode ? "text-purple-400" : "text-purple-600"}`}>
@@ -1299,7 +1191,7 @@ export default function Portfolio() {
                   : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
               }`}
             >
-              <a href="https://linkedin.com/in/piyush–maurya" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/piyush--maurya/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="mr-3" size={24} />
                 LinkedIn
               </a>
