@@ -4,7 +4,7 @@ This is my personal portfolio website built using **Next.js 14**, **Tailwind CSS
 
 ## 🌐 Live Website
 
-👉 [https://piyush-portfolio-1.vercel.app/](https://piyush-portfolio-1.vercel.app/)
+👉 [https://piyushmaurya-portfolio.vercel.app/]
 
 ## ⚙️ Tech Stack
 
